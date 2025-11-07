@@ -1,0 +1,13 @@
+
+{% extends 'diary/base.html' %}
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.body|linebreaks }}</p>
+  {% if object.attachment %}
+    <p>Attachment: <a href="{{ object.attachment.url }}">{{ object.attachment.name }}</a></p>
+  {% endif %}
+  <p><small>Created: {{ object.created_at }} — Updated: {{ object.updated_at }}</small></p>
+  <p>Tags: {{ object.tags }}</p>
+  <a href="{% url 'diary:entry_edit' object.pk %}">Edit</a> |
+  <a href="{% url 'diary:entry_delete' object.pk %}">Delete</a>
+{% endblock %}

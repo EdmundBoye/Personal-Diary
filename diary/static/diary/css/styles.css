@@ -1,0 +1,12 @@
+
+/* Simple styling for the Personal Diary */
+body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#f6f9fc; color:#0b1220; margin:0;}
+.container{max-width:900px;margin:24px auto;padding:0 16px;}
+.site-header{background:#0b1220;color:#fff;padding:12px 0;box-shadow:0 2px 8px rgba(2,6,23,0.08)}
+.site-header .container{display:flex;align-items:center;gap:16px}
+.brand{font-weight:700;color:#7dd3fc;text-decoration:none}
+nav a{color:#cfeefb;margin-left:12px;text-decoration:none}
+h2{margin-top:8px}
+.entries{list-style:none;padding-left:0}
+.entries li{padding:8px 0;border-bottom:1px solid #e6eef6}
+.pagination{margin-top:12px}

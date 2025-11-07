@@ -1,0 +1,28 @@
+
+{% extends 'diary/base.html' %}
+{% block content %}
+  <h2>My Entries</h2>
+  <form method="get">
+    <input type="text" name="q" placeholder="Search..." value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+  </form>
+
+  <ul class="entries">
+    {% for entry in object_list %}
+      <li>
+        <a href="{% url 'diary:entry_detail' entry.pk %}">{{ entry.title }}</a>
+        <small>{{ entry.created_at }}</small>
+      </li>
+    {% empty %}
+      <li>No entries yet.</li>
+    {% endfor %}
+  </ul>
+
+  {% if is_paginated %}
+    <div class="pagination">
+      {% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}">Previous</a>{% endif %}
+      <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}">Next</a>{% endif %}
+    </div>
+  {% endif %}
+{% endblock %}
