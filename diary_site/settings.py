@@ -57,12 +57,15 @@ WSGI_APPLICATION = 'diary_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQL_DATABASE', 'diary_db'),
-        'USER': os.getenv('MYSQL_USER', 'diary_user'),
-        'PASSWORD': os.getenv('MYSQL_PASSWORD', 'diary_pass'),
-        'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
-        'PORT': os.getenv('MYSQL_PORT', '3306'),
-        'OPTIONS': {'charset': 'utf8mb4'},
+        'NAME': 'Edmund212$default',
+        'USER': 'Edmund212',
+        'PASSWORD': 'patike211$',
+        'HOST': 'Edmund212.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        },
     }
 }
 
