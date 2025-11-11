@@ -9,7 +9,7 @@
     {% if object %}
       <a href="{% url 'entry_detail' object.id %}" class="btn btn-secondary" style="margin-left: 10px;">Cancel</a>
     {% else %}
-      <a href="{% url 'entry_list' %}" class="btn btn-secondary" style="margin-left: 10px;">Cancel</a>
+      <a href="{% url 'diary:entry_list' %}" class="btn btn-secondary" style="margin-left: 10px;">Cancel</a>
     {% endif %}
   </form>
 {% endblock %}
