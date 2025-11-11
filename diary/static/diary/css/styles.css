@@ -44,6 +44,7 @@ h2{margin-top:8px}
     color: #ffffff;
     text-decoration: none;
     transition: 0.2s ease-in-out;
+    display: inline-block;
 }
 
 .nav-link:hover {
@@ -55,4 +56,5 @@ h2{margin-top:8px}
 .active-tab {
     background-color: #2980b9;
     border-radius: 6px;
+    color: #fff;
 }

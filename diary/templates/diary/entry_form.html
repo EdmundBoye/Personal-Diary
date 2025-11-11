@@ -6,11 +6,16 @@
     {{ form.as_p }}
     <button type="submit"class="btn">Save</button>
 
-    {% if object %}
-      <a href="{% url 'diary:entry_detail' object.id %}" class="btn btn-secondary" style="margin-left: 10px;">Cancel</a>
-    {% else %}
-      <a href="{% url 'diary:entry_list' %}" class="btn btn-secondary" style="margin-left: 10px;">Cancel</a>
-    {% endif %}
+   {% if object %}
+    <form action="{% url 'diary:entry_detail' object.id %}" method="get" style="display:inline;">
+        <button type="submit" class="btn btn-secondary">Cancel</button>
+    </form>
+{% else %}
+    <form action="{% url 'diary:entry_list' %}" method="get" style="display:inline;">
+        <button type="submit" class="btn btn-secondary">Cancel</button>
+    </form>
+{% endif %}
+
     
   </form>
 {% endblock %}

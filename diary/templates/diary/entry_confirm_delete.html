@@ -4,5 +4,5 @@
   <h2>Delete Entry</h2>
   <p>Are you sure you want to delete "{{ object.title }}"?</p>
   <form method="post">{% csrf_token %}<button type="submit">Yes, delete</button></form>
-  <a href="{% url 'diary:entry_detail' object.pk %}">Cancel</a>
+  <a href="{% url 'diary:entry_detail' object.pk %}" class="btn btn-secondary">Cancel</a>
 {% endblock %}

@@ -8,6 +8,7 @@
   {% endif %}
   <p><small>Created: {{ object.created_at }} — Updated: {{ object.updated_at }}</small></p>
   <p>Tags: {{ object.tags }}</p>
-  <a href="{% url 'diary:entry_edit' object.pk %}">Edit</a> |
-  <a href="{% url 'diary:entry_delete' object.pk %}">Delete</a>
+<a href="{% url 'diary:entry_edit' object.pk %}" class="btn btn-primary" style="margin-right: 8px;">Edit</a>
+<a href="{% url 'diary:entry_delete' object.pk %}" class="btn btn-secondary">Delete</a>
+
 {% endblock %}
