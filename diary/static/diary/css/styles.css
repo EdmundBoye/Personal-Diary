@@ -58,3 +58,29 @@ h2{margin-top:8px}
     border-radius: 6px;
     color: #fff;
 }
+/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 8px 12px;             /* inner spacing */
+    font-size: 15px;                /* readable text */
+    border: 1px solid #cfeefb;      /* soft blue border matching theme */
+    border-radius: 6px;             /* rounded corners like buttons */
+    outline: none;                  /* remove default focus outline */
+    transition: 0.3s ease-in-out;   /* smooth focus effect */
+    width: 100%;                    /* full width for forms */
+    background-color: #fff;
+    color: #0b1220;
+    box-sizing: border-box;         /* ensures padding doesn't break layout */
+    margin-bottom: 12px;            /* spacing between fields */
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #3498db;          /* primary blue on focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
